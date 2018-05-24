@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import LanguageContext from './Language'
 import Home from './Home'
 
 class App extends Component {
@@ -11,16 +10,14 @@ class App extends Component {
 
   render() {
     return (
-      <LanguageContext.Provider value={{ language: this.state.language }}>
         <div style={{ textAlign: 'center' }}>
           <nav style={{ textAlign: 'right' }}>
             <span onClick={() => this.setLanguage('th')}>TH</span>
             /
             <span onClick={() => this.setLanguage('en')}>EN</span>
           </nav>
-          <Home />
+          <Home language={this.state.language} />
         </div>
-      </LanguageContext.Provider>
     )
   }
 }
