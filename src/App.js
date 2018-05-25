@@ -14,9 +14,9 @@ class App extends Component {
       <LanguageContext.Provider value={{ language: this.state.language }}>
         <div style={{ textAlign: 'center' }}>
           <nav style={{ textAlign: 'right' }}>
-            <span onClick={() => this.setLanguage('th')}>TH</span>
+            <span onClick={() => this.setLanguage('th')} style={{ cursor: 'pointer' }}>TH</span>
             /
-            <span onClick={() => this.setLanguage('en')}>EN</span>
+            <span onClick={() => this.setLanguage('en')} style={{ cursor: 'pointer' }}>EN</span>
           </nav>
           <Home />
         </div>
